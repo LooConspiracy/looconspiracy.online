@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://looconspiracy.online/ytplayerlib.js"></script>
+        <style>
+            body{
+                text-align: center;
+            }
+            #videoplayer{
+                display: none;
+            }
+            #button{
+                display: none;
+            }
+        </style>
+        <script>
+            window.addEventListener('load', function () {
+            document.getElementById("button").style.display = "inline";
+            })
+        </script>
+    <script>
+        function enterConspiracy(){
+            callPlayer(`videoplayer`,`playVideo`);
+            document.getElementById("videoplayer").style.display = "block";
+            document.getElementById("button").style.display = "none";
+        }
+    </script>
+
+    </head>
+<body>
+    <h1>The Loo Conspiracy</h1>
+    <div id="buttondiv" style="padding-top:10vh;font-size:2vh">
+    <button type='button' id="button" onclick="enterConspiracy()">Enter the Loo Conspiracy</button>
+    </div>
+    <br />
+    <div id="videoplayer"><iframe width="640" height="390" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  title="YouTube video player" type="text/html" src="http://www.youtube.com/embed/9iacZrrkGzk?enablejsapi=1&controls=0&loop=1"></iframe></div>
+</body></html>
